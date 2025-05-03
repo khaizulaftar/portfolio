@@ -138,13 +138,16 @@ function Component() {
                             <p className="text-white">Building efficient web and Android application solutions, supported by strong organizational, communication, and documentation skills from experience as a personal secretary</p>
                         </div>
 
-                        <motion.button
-                            className="border px-5 py-3 rounded-full capitalize text-white border-white/30 hover:border-white/60"
+                        <motion.a
+                            href="/assets/CV Khaizul Aftar.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="border px-5 py-3 rounded-full capitalize text-white border-white/30 hover:border-white/60 inline-block text-center"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                         >
                             show my cv
-                        </motion.button>
+                        </motion.a>
                     </div>
                 </div>
             </div>
