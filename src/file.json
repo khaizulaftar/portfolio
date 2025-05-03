@@ -1,0 +1,178 @@
+{
+    "skill": [
+        {
+            "language": "HTML",
+            "description": "including semantic structure and responsive, user-friendly web development.",
+            "icons": "src/assets/icons/icons8-html.svg",
+            "persen": "100%"
+        },
+        {
+            "language": "CSS",
+            "description": "focusing on responsive design, modern layouts, and user-friendly interfaces.",
+            "icons": "src/assets/icons/icons8-css.svg",
+            "persen": "100%"
+        },
+        {
+            "language": "Java Script",
+            "description": "specializing in dynamic functionality, interactive web development, and modern frameworks.",
+            "icons": "src/assets/icons/icons8-js.svg",
+            "persen": "90%"
+        },
+        {
+            "language": "Node Js",
+            "description": "specializing in building scalable, efficient backend systems and RESTful APIs.",
+            "icons": "src/assets/icons/icons8-nextjs.svg",
+            "persen": "80%"
+        },
+        {
+            "language": "Mysql",
+            "description": "pecializing in database design, query optimization, and efficient data management.",
+            "icons": "src/assets/icons/icons8-mysql.svg",
+            "persen": "80%"
+        },
+        {
+            "language": "GIT",
+            "description": "with expertise in version control, branching, merging, and collaborative project management.",
+            "icons": "src/assets/icons/icons8-git.svg",
+            "persen": "90%"
+        },
+        {
+            "language": "Tailwind Css",
+            "description": "focusing on utility-first design, responsive layouts, and efficient styling.",
+            "icons": "src/assets/icons/icons8-tailwind-css.svg",
+            "persen": "100%"
+        },
+        {
+            "language": "React Js",
+            "description": "specializing in building dynamic, component-based user interfaces and managing state efficiently.",
+            "icons": "src/assets/icons/icons8-react-js.svg",
+            "persen": "80%"
+        },
+        {
+            "language": "Express Js",
+            "description": "focusing on building fast, scalable web applications and RESTful APIs with a robust backend structure.",
+            "icons": "src/assets/icons/icons8-express-js.svg",
+            "persen": "80%"
+        },
+        {
+            "language": "Next Js",
+            "description": "specializing in building server-side rendered React applications, optimizing performance, and enhancing SEO.",
+            "icons": "src/assets/icons/icons8-nextjs.svg",
+            "persen": "80%"
+        },
+        {
+            "language": "GIthub",
+            "description": "with expertise in version control, project collaboration, and managing repositories efficiently.",
+            "icons": "src/assets/icons/icons8-github.svg",
+            "persen": "90%"
+        },
+        {
+            "language": "Boostrap",
+            "description": "specializing in creating responsive, mobile-first web layouts with pre-built components and utilities.",
+            "icons": "src/assets/icons/icons8-bootstrap.svg",
+            "persen": "90%"
+        }
+    ],
+    "licences": [
+        {
+            "nama": "Skillsoft",
+            "licence": [
+                "src/assets/licence/Ajax Data Requests & Responses (skillsoft)-1.jpg",
+                "src/assets/licence/Bootstrap Environment, Requirements, & Setup (skillsoft)-1.jpg",
+                "src/assets/licence/Bootstrap Forms & Layout (skillsoft)-1.jpg",
+                "src/assets/licence/Whole Page Controls & Extending Bootstrap (skillsoft-1.jpg",
+                "src/assets/licence/REST API_ Exploring the Basic Features (skillsoft)-1.jpg"
+            ]
+        },
+        {
+            "nama": "Codepolitan",
+            "licence": [
+                "src/assets/licence/Algoritma dan Pemrograman Dasar (codepolitan)-1.jpg",
+                "src/assets/licence/Belajar Dasar-dasar HTML dan CSS (codepolitan)-1.jpg",
+                "src/assets/licence/Belajar GIT untuk Pemula (codepolitan)-1.jpg",
+                "src/assets/licence/Belajar JavaScript Dasar (codepolitan)-1.jpg",
+                "src/assets/licence/Belajar JQuery Dasar (codepolitan)-1.jpg",
+                "src/assets/licence/Mahir menggunakan Text Editor buat Pemula (codepolitan)-1.jpg",
+                "src/assets/licence/Menggunakan Bootstrap Framework (codepolitan)-1.jpg",
+                "src/assets/licence/Panduan Awal Menjadi Fullstack Web Developer (codepolitan)-1.jpg",
+                "src/assets/licence/Pemrograman Python untuk Pemula (codepolitan)-1.jpg",
+                "src/assets/licence/Pengenalan Database Menggunakan MySQL (codepolitan)-1.jpg"
+            ]
+        },
+        {
+            "nama": "Dicoding",
+            "licence": [
+                "src/assets/licence/Belajar Dasar AI (dicoding)-1.jpg",
+                "src/assets/licence/Belajar Dasar Data Science( dicoding )-1.jpg",
+                "src/assets/licence/Belajar Dasar Manajemen Proyek (dicoding)-1.jpg",
+                "src/assets/licence/Belajar Dasar Pemrograman JavaScript (dicoding)-1.jpg",
+                "src/assets/licence/Belajar Dasar Pemrograman Web (dicoding)-1.jpg",
+                "src/assets/licence/Belajar Dasar Structured Query Language (SQL) (Dicoding)-1.jpg",
+                "src/assets/licence/Belajar Membuat Aplikasi Back-End untuk Pemula (dicoding)-1.jpg",
+                "src/assets/licence/Belajar Membuat Front-End Web untuk Pemula (dicoding)-1.jpg",
+                "src/assets/licence/Belajar Strategi Pengembangan Diri (dicoding)-1.jpg",
+                "src/assets/licence/Cloud Practitioner Essentials (Belajar Dasar AWS Cloud) (dicoding)-1.jpg"
+            ]
+        },
+        {
+            "nama": "FreeCodeCamp",
+            "licence": [
+                "src/assets/licence/Responsive Web Design (freeCodeCamp)-1.jpg",
+                "src/assets/licence/JavaScript Algorithms and Data Structures (Beta) (freeCodeCamp)-1.jpg",
+                "src/assets/licence/Pustaka Pengembangan Front End (freeCodeCamp)-1.jpg"
+            ]
+        },
+        {
+            "nama": "Sololearn",
+            "licence": [
+                "src/assets/licence/Introduction to CSS (sololearn)-1.jpg",
+                "src/assets/licence/Introduction to HTML (sololearn)-1.jpg",
+                "src/assets/licence/Introduction to JavaScript (sololearn)-1.jpg"
+            ]
+        },
+        {
+            "nama": "Cisco",
+            "licence": [
+                "src/assets/licence/JavaScript_Essentials_1_(cisco)-1.jpg",
+                "src/assets/licence/JavaScript_Essentials_2_(cisco)-1.jpg",
+                "src/assets/licence/CISCO Networking Academy-1.jpg"
+            ]
+        }
+    ],
+    "certificate": [
+        "src/assets/licence/Belajar Dasar-dasar HTML dan CSS (codepolitan)-1.jpg",
+        "src/assets/licence/JavaScript_Essentials_1_(cisco)-1.jpg",
+        "src/assets/licence/Bootstrap Forms & Layout (skillsoft)-1.jpg",
+        "src/assets/licence/Pemrograman Python untuk Pemula (codepolitan)-1.jpg",
+        "src/assets/licence/Belajar Dasar Pemrograman JavaScript (dicoding)-1.jpg",
+        "src/assets/licence/Pustaka Pengembangan Front End (freeCodeCamp)-1.jpg",
+        "src/assets/licence/Introduction to HTML (sololearn)-1.jpg",
+        "src/assets/licence/Whole Page Controls & Extending Bootstrap (skillsoft-1.jpg",
+        "src/assets/licence/Cloud Practitioner Essentials (Belajar Dasar AWS Cloud) (dicoding)-1.jpg",
+        "src/assets/licence/Algoritma dan Pemrograman Dasar (codepolitan)-1.jpg",
+        "src/assets/licence/Belajar Dasar Structured Query Language (SQL) (Dicoding)-1.jpg",
+        "src/assets/licence/JavaScript_Essentials_2_(cisco)-1.jpg",
+        "src/assets/licence/Belajar Membuat Front-End Web untuk Pemula (dicoding)-1.jpg",
+        "src/assets/licence/Responsive Web Design (freeCodeCamp)-1.jpg",
+        "src/assets/licence/Belajar Dasar Data Science( dicoding )-1.jpg",
+        "src/assets/licence/Introduction to CSS (sololearn)-1.jpg",
+        "src/assets/licence/Menggunakan Bootstrap Framework (codepolitan)-1.jpg",
+        "src/assets/licence/Pengenalan Database Menggunakan MySQL (codepolitan)-1.jpg",
+        "src/assets/licence/Bootstrap Environment, Requirements, & Setup (skillsoft)-1.jpg",
+        "src/assets/licence/Belajar Strategi Pengembangan Diri (dicoding)-1.jpg",
+        "src/assets/licence/CISCO Networking Academy-1.jpg",
+        "src/assets/licence/Belajar Membuat Aplikasi Back-End untuk Pemula (dicoding)-1.jpg",
+        "src/assets/licence/JavaScript Algorithms and Data Structures (Beta) (freeCodeCamp)-1.jpg",
+        "src/assets/licence/Belajar JavaScript Dasar (codepolitan)-1.jpg",
+        "src/assets/licence/Mahir menggunakan Text Editor buat Pemula (codepolitan)-1.jpg",
+        "src/assets/licence/REST API_ Exploring the Basic Features (skillsoft)-1.jpg",
+        "src/assets/licence/Belajar GIT untuk Pemula (codepolitan)-1.jpg",
+        "src/assets/licence/Belajar Dasar Pemrograman Web (dicoding)-1.jpg",
+        "src/assets/licence/Belajar Dasar AI (dicoding)-1.jpg",
+        "src/assets/licence/Belajar Dasar Manajemen Proyek (dicoding)-1.jpg",
+        "src/assets/licence/Belajar JQuery Dasar (codepolitan)-1.jpg",
+        "src/assets/licence/Belajar Dasar Pemrograman JavaScript (dicoding)-1.jpg",
+        "src/assets/licence/Panduan Awal Menjadi Fullstack Web Developer (codepolitan)-1.jpg",
+        "src/assets/licence/Introduction to JavaScript (sololearn)-1.jpg"
+    ]
+}
