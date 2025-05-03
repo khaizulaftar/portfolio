@@ -122,7 +122,7 @@ function Component() {
                     <div className="z-10 h-screen flex flex-col items-center justify-center gap-5">
                         <motion.div animate={controls}>
                             <motion.img
-                                src="src/assets/profile.png"
+                                src="/assets/profile.png"
                                 className="w-40 rounded-full border-2 border-white/20 shadow-lg"
                                 style={{ x: imgX, y: imgY, rotateX, rotateY, perspective: 1000 }}
                                 whileHover={{ scale: 1.1 }}
@@ -130,12 +130,12 @@ function Component() {
                             />
                         </motion.div>
                         <div className="text-center">
-                            <h1 className="uppercase text-3xl sm:text-5xl font-semibold text-white">full stack web</h1>
-                            <h1 className="uppercase text-3xl sm:text-5xl font-semibold text-white">developer</h1>
+                            <h1 className="text-xl sm:text-3xl font-semibold text-white">Web & Android Developer</h1>
+                            <h1 className="text-xl sm:text-3xl font-semibold text-white">Personal Secretary at Polresta Padang</h1>
                         </div>
 
-                        <div className="text-center max-w-md mx-6">
-                            <p className="text-white">Helping startups and brands craft expressive and engaging web solutions with full-stack expertise</p>
+                        <div className="text-center max-w-2xl mx-6">
+                            <p className="text-white">Building efficient web and Android application solutions, supported by strong organizational, communication, and documentation skills from experience as a personal secretary</p>
                         </div>
 
                         <motion.button
@@ -149,41 +149,6 @@ function Component() {
                 </div>
             </div>
 
-            {/* Skills Marquee Section - PRESERVED EXACTLY AS REQUESTED */}
-            {/* <div className="mb-80 mt-20 overflow-hidden">
-                <div className="flex flex-col items-center gap-10 sticky top-20">
-                    <motion.div
-                        className="overflow-x-scroll max-w-5xl"
-                        style={{ scrollbarWidth: 'none' }}
-                        initial={{ opacity: 0, y: 100 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true, margin: "0px 0px -50% 0px" }}
-                    >
-                        <motion.div
-                            className="flex space-x-20"
-                            animate={{ x: ["0%", "-100%"] }}
-                            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                        >
-                            {[...file.skill, ...file.skill].map((value, index) => (
-                                <motion.img
-                                    key={index}
-                                    src={value.icons}
-                                    className="h-16"
-                                    alt={value.language}
-                                />
-                            ))}
-                        </motion.div>
-                    </motion.div>
-
-                    <div className="max-w-3xl text-center sticky">
-                        <p className="text-2xl text-white mx-6">
-                            A graduate of Muathafawiyah Islamic boarding school with expertise in full-stack web development. Continuously learning in the IT field and also experienced as a Personal Assistant at Polresta Padang. Open to opportunities in technology and professional development
-                        </p>
-                    </div>
-                </div>
-            </div> */}
-            {/* Skills Marquee Section - PRESERVED EXACTLY AS REQUESTED */}
             <div className="mb-80 mt-20 overflow-hidden">
                 <div className="flex flex-col items-center gap-10 sticky top-20">
                     <motion.div
@@ -225,7 +190,6 @@ function Component() {
                     </motion.div>
                 </div>
             </div>
-
 
             {/* Skills Grid Section */}
             <div className="md:grid md:grid-cols-2 gap-0 align-center my-40">
@@ -273,7 +237,7 @@ function Component() {
                                 <h1 className="text-2xl md:text-3xl font-semibold capitalize text-white">
                                     {value.language}
                                 </h1>
-                                <p className="my-3 text-white">{value.description}</p>
+                                <p className="my-3 text-white text-sm">{value.description}</p>
                                 <div className="block rounded-full bg-gray-400 w-full overflow-hidden">
                                     <motion.span
                                         className="block h-3 flex items-center justify-center rounded-full bg-[#82FF1F] text-center text-[10px]"
@@ -287,7 +251,7 @@ function Component() {
                                         }}
                                         viewport={{ once: true }}
                                     >
-                                        <span className="font-bold text-white">{value.persen}</span>
+                                        <span className="font-bold text-gray-700">{value.persen}</span>
                                     </motion.span>
                                 </div>
                             </div>
@@ -299,14 +263,14 @@ function Component() {
 
             {/* Experience Section */}
             <motion.div
-                className="mx-6 sm:px-24 my-40"
+                className="mx-6 sm:px-24"
                 initial={{ opacity: 0, y: 80, rotateX: -10, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true, margin: "0px 0px -20% 0px" }}
             >
-                <h1 className="text-2xl uppercase mb-6 text-white font-semibold tracking-widest">
-                    professional experience
+                <h1 className="text-xl uppercase mb-6 text-white font-semibold tracking-widest">
+                    experience
                 </h1>
 
                 <motion.div
@@ -325,7 +289,7 @@ function Component() {
                         whileInView={{ rotateZ: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        <img src="src/assets/logo.png" className="w-20" alt="Experience" />
+                        <img src="/assets/logo.png" className="w-20" alt="Experience" />
                     </motion.div>
 
                     <div>
@@ -335,20 +299,20 @@ function Component() {
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.5, delay: 0.3 }}
                         >
-                            Personal Assistant
+                            Personal Secretary
                         </motion.h1>
 
                         <motion.h2
-                            className="my-2 mb-5 text-lg sm:text-xl capitalize text-white"
+                            className="my-2 text-lg capitalize text-white"
                             initial={{ x: -50, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                         >
-                            polresta padang, sumatera barat
+                            polresta padang | Padang Sumatera Barat
                         </motion.h2>
 
                         <motion.span
-                            className="rounded-full px-3 py-1 bg-white text-gray-700 inline-block"
+                            className="rounded-full px-3 py-1 bg-white text-gray-700 inline-block text-sm"
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
                             transition={{ type: "spring", stiffness: 180, damping: 10, delay: 0.5 }}
@@ -356,12 +320,78 @@ function Component() {
                             Maret 2023 - Maret 2025
                         </motion.span>
 
-                        <ul className="mt-6 list-disc text-gray-400 ml-5 space-y-3">
+                        <ul className="mt-2 list-disc text-gray-400 ml-5 text-sm">
                             {[
-                                "Assisted in drafting official correspondence, reports, and documentation with accuracy and attention to detail.",
-                                "Coordinated meetings, events, and public engagements, enhancing communication and collaboration among departments.",
-                                "Maintained confidential records and handled sensitive information with discretion and professionalism.",
-                                "Provided support in logistical arrangements for high-profile operations and ceremonies.",
+                                "Managed admin tasks, including scheduling and filing.",
+                                "Drafted and handled official correspondence.",
+                                "Prepared reports, memos, and key documents.",
+                            ].map((text, i) => (
+                                <motion.li
+                                    key={i}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.4, delay: 0.6 + i * 0.2 }}
+                                    viewport={{ once: true }}
+                                >
+                                    {text}
+                                </motion.li>
+                            ))}
+                        </ul>
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    className="rounded-xl flex flex-col lg:flex-row gap-5 sm:p-12 p-6 mb-6 transition-all backdrop-blur-md border border-gray-600/30"
+                    style={{ backgroundColor: "rgba(39, 40, 41, 0.4)" }}
+                    initial={{ opacity: 0, scale: 0.9, rotateY: -5 }}
+                    whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                    whileHover={{
+                        scale: 1.015,
+                    }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                >
+                    <motion.div
+                        initial={{ rotateZ: -10, opacity: 0 }}
+                        whileInView={{ rotateZ: 0, opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
+                        <img src="/assets/siko kebab.png" className="w-20" alt="Experience" />
+                    </motion.div>
+
+                    <div>
+                        <motion.h1
+                            className="text-2xl sm:text-3xl font-semibold capitalize text-white"
+                            initial={{ x: -50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                        >
+                            Freelance Web Devaloper
+                        </motion.h1>
+
+                        <motion.h2
+                            className="my-2 text-lg capitalize text-white"
+                            initial={{ x: -50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                        >
+                            Siko Kebab | padang, sumatera barat
+                        </motion.h2>
+
+                        <motion.span
+                            className="rounded-full px-3 py-1 bg-white text-gray-700 inline-block text-sm"
+                            initial={{ scale: 0 }}
+                            whileInView={{ scale: 1 }}
+                            transition={{ type: "spring", stiffness: 180, damping: 10, delay: 0.5 }}
+                        >
+                            Januari - Februari 2025
+                        </motion.span>
+
+                        <ul className="mt-2 list-disc text-gray-400 ml-5 text-sm">
+                            {[
+                                "Developed a web-based system for inventory management and income tracking.",
+                                "Building a fullstack web application using Next.js, Tailwind CSS, and MySQL.",
+                                "Performed app testing and version control using Git & GitHub.",
                             ].map((text, i) => (
                                 <motion.li
                                     key={i}
