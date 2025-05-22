@@ -1,36 +1,9 @@
 import { motion, useTransform, useMotionValue, useScroll, useAnimation } from "framer-motion";
 import file from './file.json';
-import { useEffect } from "react";
 
 function Component() {
-    // Mouse tracking
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
     const controls = useAnimation();
-
-    // Scroll tracking
     const { scrollY } = useScroll();
-
-    // Image transformations
-    const imgX = useTransform(mouseX, [0, window.innerWidth], [-50, 50]);
-    const imgY = useTransform(mouseY, [0, window.innerHeight], [-50, 50]);
-    const rotateX = useTransform(mouseY, [0, window.innerHeight], [50, -50]);
-    const rotateY = useTransform(mouseX, [0, window.innerWidth], [-50, 50]);
-
-    // Mouse effect
-    useEffect(() => {
-        const handleMouseMove = (e) => {
-            mouseX.set(e.clientX);
-            mouseY.set(e.clientY);
-            controls.start({
-                scale: 1.05,
-                transition: { type: "spring", stiffness: 300 }
-            });
-        };
-
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => window.removeEventListener('mousemove', handleMouseMove);
-    }, [mouseX, mouseY, controls]);
 
     return (
         <>
@@ -124,7 +97,6 @@ function Component() {
                             <motion.img
                                 src="/assets/profile.png"
                                 className="w-40 rounded-full border-2 border-white/20 shadow-lg"
-                                style={{ x: imgX, y: imgY, rotateX, rotateY, perspective: 1000 }}
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.95 }}
                             />
@@ -152,15 +124,13 @@ function Component() {
                 </div>
             </div>
 
-            <div className="mb-80 mt-20 overflow-hidden">
+            <div className="mt-20 overflow-hidden">
                 <div className="flex flex-col items-center gap-10 sticky top-20">
                     <motion.div
                         className="overflow-x-scroll max-w-5xl"
                         style={{ scrollbarWidth: 'none' }}
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true, margin: "0px 0px -50% 0px" }}
                     >
                         <motion.div
                             className="flex space-x-20 p-2"
@@ -180,29 +150,22 @@ function Component() {
                         </motion.div>
                     </motion.div>
 
-                    <motion.div
-                        className="max-w-3xl text-center sticky"
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.3 }}
-                        viewport={{ once: true }}
-                    >
+                    <div className="max-w-3xl text-center sticky">
                         <p className="text-2xl text-white mx-6 leading-relaxed tracking-wide">
                             A graduate of Muathafawiyah Islamic boarding school with expertise in full-stack web development. Continuously learning in the IT field and also experienced as a Personal Assistant at Polresta Padang. Open to opportunities in technology and professional development
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
 
             {/* Skills Grid Section */}
-            <div className="md:grid md:grid-cols-2 gap-0 align-center my-40">
+            <div className="md:grid md:grid-cols-2 gap-0 align-center my-40 bg-orange">
                 <div className="text-center md:text-end sticky top-20 md:top-0 md:relative">
                     <motion.div
                         className="sticky md:top-40 mb-10 mx-6"
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ type: "spring", stiffness: 90, damping: 20, delay: 0.2 }}
-                        viewport={{ once: true, margin: "0px 0px -50% 0px" }}
+                        transition={{ type: "spring" }}
                     >
                         <p className="text-xl text-gray-500 font-semibold">
                             programming language & framework
@@ -221,13 +184,9 @@ function Component() {
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{
-                                type: "spring",
-                                stiffness: 100,
-                                damping: 18,
-                                delay: index * 0.1,
+                                type: "tween",
                             }}
-                            viewport={{ once: true, margin: "0px 0px -20% 0px" }}
-                            whileHover={{ scale: 1.05, rotate: -1 }}
+                            whileHover={{ scale: 1.05, rotate: -2 }}
                         >
                             <div>
                                 <img
@@ -248,11 +207,7 @@ function Component() {
                                         whileInView={{ width: value.persen }}
                                         transition={{
                                             type: "spring",
-                                            stiffness: 90,
-                                            damping: 12,
-                                            delay: 0.4 + index * 0.1,
                                         }}
-                                        viewport={{ once: true }}
                                     >
                                         <span className="font-bold text-gray-700">{value.persen}</span>
                                     </motion.span>
@@ -263,16 +218,14 @@ function Component() {
                 </div>
             </div>
 
-
             {/* Experience Section */}
             <motion.div
                 className="mx-6 sm:px-24"
                 initial={{ opacity: 0, y: 80, rotateX: -10, scale: 0.95 }}
                 whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true, margin: "0px 0px -20% 0px" }}
+                transition={{ ease: "easeOut" }}
             >
-                <h1 className="text-xl uppercase mb-6 text-white font-semibold tracking-widest">
+                <h1 className="text-2xl uppercase mb-6 text-white font-semibold tracking-widest">
                     experience
                 </h1>
 
@@ -282,15 +235,13 @@ function Component() {
                     initial={{ opacity: 0, scale: 0.9, rotateY: -5 }}
                     whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
                     whileHover={{
-                        scale: 1.015,
+                        scale: 1.05,
                     }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                    viewport={{ once: true }}
+                    transition={{ ease: "easeOut" }}
                 >
                     <motion.div
                         initial={{ rotateZ: -10, opacity: 0 }}
                         whileInView={{ rotateZ: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <img src="/assets/logo.png" className="w-20" alt="Experience" />
                     </motion.div>
@@ -300,7 +251,6 @@ function Component() {
                             className="text-2xl sm:text-3xl font-semibold capitalize text-white"
                             initial={{ x: -50, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
                         >
                             Personal Secretary
                         </motion.h1>
@@ -309,7 +259,6 @@ function Component() {
                             className="my-2 text-lg capitalize text-white"
                             initial={{ x: -50, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
                         >
                             polresta padang | Padang Sumatera Barat
                         </motion.h2>
@@ -318,7 +267,7 @@ function Component() {
                             className="rounded-full px-3 py-1 bg-white text-gray-700 inline-block text-sm"
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
-                            transition={{ type: "spring", stiffness: 180, damping: 10, delay: 0.5 }}
+                            transition={{ type: "spring" }}
                         >
                             Maret 2023 - Maret 2025
                         </motion.span>
@@ -334,7 +283,6 @@ function Component() {
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.4, delay: 0.6 + i * 0.2 }}
-                                    viewport={{ once: true }}
                                 >
                                     {text}
                                 </motion.li>
@@ -349,15 +297,13 @@ function Component() {
                     initial={{ opacity: 0, scale: 0.9, rotateY: -5 }}
                     whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
                     whileHover={{
-                        scale: 1.015,
+                        scale: 1.05,
                     }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                    viewport={{ once: true }}
+                    transition={{ ease: "easeOut" }}
                 >
                     <motion.div
                         initial={{ rotateZ: -10, opacity: 0 }}
                         whileInView={{ rotateZ: 0, opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <img src="/assets/siko kebab.png" className="w-20" alt="Experience" />
                     </motion.div>
@@ -367,7 +313,6 @@ function Component() {
                             className="text-2xl sm:text-3xl font-semibold capitalize text-white"
                             initial={{ x: -50, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
                         >
                             Freelance Web Devaloper
                         </motion.h1>
@@ -376,7 +321,6 @@ function Component() {
                             className="my-2 text-lg capitalize text-white"
                             initial={{ x: -50, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
                         >
                             Siko Kebab | padang, sumatera barat
                         </motion.h2>
@@ -385,7 +329,7 @@ function Component() {
                             className="rounded-full px-3 py-1 bg-white text-gray-700 inline-block text-sm"
                             initial={{ scale: 0 }}
                             whileInView={{ scale: 1 }}
-                            transition={{ type: "spring", stiffness: 180, damping: 10, delay: 0.5 }}
+                            transition={{ type: "spring" }}
                         >
                             Januari - Februari 2025
                         </motion.span>
@@ -401,7 +345,6 @@ function Component() {
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.4, delay: 0.6 + i * 0.2 }}
-                                    viewport={{ once: true }}
                                 >
                                     {text}
                                 </motion.li>
@@ -411,16 +354,14 @@ function Component() {
                 </motion.div>
             </motion.div>
 
-
             {/* Certificates Section */}
             <div className="h-screen flex items-center justify-center relative overflow-hidden">
                 {/* Content */}
                 <div className="text-center items-center flex flex-col gap-5 relative z-20 mb-12 mx-6">
                     <motion.h1
                         className="capitalize text-3xl sm:text-5xl text-white font-semibold"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
                     >
                         my licences & certifications
                     </motion.h1>
@@ -429,7 +370,6 @@ function Component() {
                         className="max-w-md text-white/80"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.2 }}
                     >
                         "I hold a coding certificate that showcases my skills in web development and programming."
                     </motion.p>
@@ -442,7 +382,6 @@ function Component() {
                         className="overflow-hidden w-full"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ duration: 1 }}
                     >
                         <motion.div
                             className="flex gap-8 w-max py-10"
@@ -481,7 +420,6 @@ function Component() {
                         initial={{ opacity: 0 }}
                         whileInView={{
                             opacity: 1,
-                            transition: { duration: 1, delay: 0.3 }
                         }}
                     >
                         <motion.div
@@ -490,8 +428,7 @@ function Component() {
                             transition={{
                                 duration: 500,
                                 repeat: Infinity,
-                                ease: "linear",
-                                delay: 0 // Removed the 50 second delay
+                                ease: "linear"
                             }}
                         >
                             {[...file.certificate, ...file.certificate].map((cert, i) => (
@@ -521,4 +458,4 @@ function Component() {
     )
 }
 
-export default Component;
+export default Component
